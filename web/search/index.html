@@ -1,0 +1,52 @@
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="css/cc-fonts.css" media="screen,print" />
+    <link rel="stylesheet" href="css/search.css" media="screen,print" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $( document ).ready(function() {
+        refresh();
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="view-container">
+      <div class="sub-header">
+        <div class="sub-header-top">
+          <span class="page-title">Search</span>
+        </div>
+      </div>
+      <div class="view">
+        <div class="view-data">
+          <span class="xldsrch-label">Search for instances of a type</span>
+          <table>
+            <tr><td class="xldsrch-label">Type</td><td><input type="text" id="searchType" class="xldsrch-wide-textbox"></td></tr>
+            <tr><td class="xldsrch-label">Parent</td><td><input type="text" id="searchParent"></td></tr>
+            <tr><td class="xldsrch-label">Ancestor</td><td><input type="text" id="searchAncestor"></td></tr>
+          </table>
+          <input type="button" value="Search" onclick="searchForType()" />
+          <input type="button" value="Clear/Refresh" onclick="refresh()" />
+        </div>
+        <hr>
+        <div class="view-data">
+          <span class="xldsrch-font-12px-bold">Search results</span>
+          <table id="searchResults" cellspacing="10">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <body>
+ </html>
