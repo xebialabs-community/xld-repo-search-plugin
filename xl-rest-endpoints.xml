@@ -3,5 +3,6 @@
            xsi:schemaLocation="http://www.xebialabs.com/deployit/endpoints endpoints.xsd">
 
     <endpoint path="/search/searchForType" method="GET" script="search/searchForType.py" />
+    <endpoint path="/search/searchForType" method="POST" script="search/searchForType.py" />
 
 </endpoints>

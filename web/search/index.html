@@ -31,9 +31,22 @@
         <div class="view-data">
           <span class="xldsrch-label">Search for instances of a type</span>
           <table>
-            <tr><td class="xldsrch-label">Type</td><td><input type="text" id="searchType" class="xldsrch-wide-textbox"></td></tr>
-            <tr><td class="xldsrch-label">Parent</td><td><input type="text" id="searchParent"></td></tr>
-            <tr><td class="xldsrch-label">Ancestor</td><td><input type="text" id="searchAncestor"></td></tr>
+            <tr>
+              <td class="xldsrch-label">Type</td>
+              <td><input type="text" id="searchType" class="xldsrch-wide-textbox"></td>
+            </tr>
+            <tr>
+              <td class="xldsrch-label">Parent</td>
+              <td><input type="text" id="searchParent" class="xldsrch-wide-textbox"></td>
+            </tr>
+            <tr>
+              <td class="xldsrch-label">Ancestor</td>
+              <td><input type="text" id="searchAncestor" class="xldsrch-wide-textbox"></td>
+            </tr>
+            <tr>
+              <td class="xldsrch-label">Search for properties</td>
+              <td><input type="text" id="searchForProperties" class="xldsrch-wide-textbox"></td>
+            </tr>
           </table>
           <input type="button" value="Search" onclick="searchForType()" />
           <input type="button" value="Clear/Refresh" onclick="refresh()" />

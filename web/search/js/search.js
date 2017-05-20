@@ -17,23 +17,38 @@ function searchForType() {
   p1 = $('#searchType').val();
   p2 = $('#searchParent').val();
   p3 = $('#searchAncestor').val();
+  p4 = $("#searchForProperties").val();
   $.ajax({
-    datatype: "json",
-    url: "/api/extension/search/searchForType?p1=" + p1 + "&p2=" + p2 + "&p3=" + p3,
-    crossDomain: true,
     beforeSend: function(xhr) {
       var base64 = parent.getAuthToken();
       xhr.setRequestHeader("Authorization", base64);
     },
+    crossDomain: true,
+    data: '{"searchForProperties":' + '"{0}"'.format(p4) +'}',
+    dataType: "json",
+    headers: {"Content-Type": "application/json"},
+    method: "POST",
+    processData: false,
+    url: "/api/extension/search/searchForType?p1=" + p1 + "&p2=" + p2 + "&p3=" + p3,
     success: function(data) {
       $("#searchResults").children("thead").empty();
       $("#searchResults").children("tbody").empty();
-      $("#searchResults").children("thead").append(
-        '<tr><th><div class="xldsrch-wide-column">Configuration Item Id</div></th>' + 
-            '<th><div class="xldsrch-wide-column">Initial Heap Size</div></th>' + 
-            '<th><div class="xldsrch-wide-column">Maximum Heap Size</div></th></tr>');
       $.each(data.entity, function(idx, val) {
-        $("#searchResults").append('<tr><td>' + val['c1'] + '</td><td>' + val['c2']+ '</td><td>' + val['c3']  + '</td></tr>');
+        if (idx == 0) {
+          headerRow = '<tr>';
+          for (j = 0; j < val.length; j ++) {
+            headerRow += '<th><div class="xldsrch-wide-column">{0}</div></th>'.format(val[j]);
+          }
+          headerRow += '</tr>'
+          $("#searchResults").children("thead").append(headerRow);
+        } else {
+          dataRow = '<tr>'
+          for (j = 0; j < val.length; j++) {
+            dataRow += '<td>{0}</td>'.format(val[j]);
+          }
+          dataRow += '</tr>'
+          $("#searchResults").children("tbody").append(dataRow);
+        }
       })
     },
     error: function(xhr, status, error) {
@@ -46,6 +61,7 @@ function refresh() {
     $("#searchType").val("");
     $("#searchParent").val("");
     $("#searchAncestor").val("");
+    $("#searchForProperties").val("");
     $("#searchResults").children("thead").empty();
     $("#searchResults").children("tbody").empty();
 }
