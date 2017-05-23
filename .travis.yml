@@ -1,0 +1,16 @@
+language: java
+notifications:
+  hipchat:
+    rooms:
+      secure: puTJCCbwpjLW+tINkJNee421Eq5auHgJfPkutJ7RI6WvGg0NA/yYnUe0fOxAx9Fx6BnNWQqJbwDw0u3uW80b89P4x981VuIgM2r8QGO9QzjMO+IZSlaR+S2oc317EdlUfyR11et+It/VQlreAXyrGQlh1bBSPUisya//MMb13HYiiuO7W1AMUgSZAUrNOJYlCJUPMF29XkeqnCen7HlHRVCw/hB/Ukr/gwn6/jv/geo0k8L2u6j+1fule7DZ6dbrcKkpOMRyqOJoqEE8sQYbPQ+kjQGJEXy2eF5faPUg6yqyQyucOlh8iHxNlabxEnQAjicGUnua1JkjeWaRrUqgwT4GYxPUWMt4Sl/Cy7dx2V8mrBjlSzlPZVxfhrhy28ylhBCF2Nn7gEILNOQfIrQ5pUFJZ87NQNBVIlnGQ4VNl9a1+pg5yIFfDLDb9xSE9G952AUWeB0OQW5iePc/b7ZOvIi4dB/ohCNVJ1jWzk2Vef1pjGqudSB6tObPmXokqDa2KulobVDkcYcVG+MkEWlqL+IYF+lhpvf/ovjzN+PzaWH+yS5G1w6t9PDaY4A65rTUlyDgQO78E+v9pK7QXqc/jG3BIvJ7SiV0PR0LsmFlDU0jzqXoGMipQt8coMx6LRUSm+pZQHsBUnplajiWIgqA/g8nuFwSGbkqdwLb38NNYK8=
+deploy:
+  provider: releases
+  api_key:
+    secure: OfT92FOQL3dZHsfeX1EiBIsUqBkqRXNS4hGtjB3NvSMnIe2rP+/j+MYnwuJHMlJ4bgBjK+9QzBOLE4xJ+DKnPVjTZ9uYhwSY8MYBNnUyIXdFVd9yWlYE80SN4t2z74gs7AHqR6uLe3ikqTypuJ1Wm2t3O6na3ar4qB849HUj+QfsWHTQB39U9mu0qW9JkvxyRCGrbqiwH40NzSEdZN97hYu4OdF/UG9KkCKQwCrK41x/PLvqFQ0QV8RJELdUa1JEQ6XGJHnzHP+wOSJcyuKMMcr7D5UKKnag7p9Ce2m3O1ux0quMhZ8j5kPkdJpm7/WNeCheTbDw+ZRbrfVK5x2U9sFwfDLa8bq9OJBcSEvliiEQBGU00Xhh78oU4nLnOZ0Mtm/C6NbPERsQW+t/ktjf49ivOzW6lPyc0vHLCC3QLaf0K89EhhvPUzHxsDivv8pXh76Gl5H0Q9VqyRavHjxfqn2MG1pdyHbRXt66u6f3TalmaTD3fKSTMJAUkJUZAPuhV+VyFJSTFbtijTMf3FTeIWt14RfEOF8SqwmKgBh+eQ3LD9D9yLOFFAyH1bNJb+AaXbtjUyw8buAKDxbz9FTV5y3HDZ5RQjPKMOPVOz97M1L0P2COBtZTTDqdQjnwBnFL68M9QA/lrFkVr4yB8+2SVKO5spzTgb9BegLSAOg6Kjs=
+  file: build/libs/xld-repo-search-plugin-1.0.0.jar
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
+    repo: xebialabs-community/xld-repo-search-plugin
+
