@@ -3,8 +3,8 @@
 ## CI status ##
 
 [![Build Status][xld-repo-search-plugin-travis-image]][xld-repo-search-plugin-travis-url]
-[![License: MIT][xld-repo-search-plugin-license-image] ][xld-repo-search-plugin-license-url]
-[![Github All Releases][xld-repo-search-plugin-downloads-image] ]()
+[![License: MIT][xld-repo-search-plugin-license-image]][xld-repo-search-plugin-license-url]
+![Github All Releases][xld-repo-search-plugin-downloads-image]
 
 [xld-repo-search-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-repo-search-plugin.svg?branch=master
 [xld-repo-search-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-repo-search-plugin
