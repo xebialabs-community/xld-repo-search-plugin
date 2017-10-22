@@ -1,9 +1,18 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 plugins {
-  id "com.github.hierynomus.license" version "0.13.1"
+  id "com.github.hierynomus.license" version "0.14.0"
   id "java"
 }
 
 version = "1.0.0"
+
+processResources.configure {
+  filter ReplaceTokens, tokens: [
+    'project.version': version.toString(),
+    'project.name'   : rootProject.name
+  ]
+}
 
 license {
   header rootProject.file('License.md')
