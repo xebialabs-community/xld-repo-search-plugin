@@ -17,16 +17,20 @@ String.prototype.format = function () {
   });
 };
 
+function authorize(xhr) {
+    if (parent && parent.getAuthToken) {
+        var base64 = parent.getAuthToken();
+        xhr.setRequestHeader("Authorization", base64);
+    }
+}
+
 function searchForType() {
   p1 = $('#searchType').val();
   p2 = $('#searchParent').val();
   p3 = $('#searchAncestor').val();
   p4 = $("#searchForProperties").val();
   $.ajax({
-    beforeSend: function(xhr) {
-      var base64 = parent.getAuthToken();
-      xhr.setRequestHeader("Authorization", base64);
-    },
+    beforeSend: authorize,
     crossDomain: true,
     data: '{"searchForProperties":' + '"{0}"'.format(p4) +'}',
     dataType: "json",

@@ -18,11 +18,14 @@ searchParent = request.query['p2']
 searchAncestor = request.query['p3']
 searchForProperties = request.entity['searchForProperties'].replace(' ','').split(',')
 
-if searchParent is not None and searchParent.split('/')[0] != "Infrastructure":
-  raise Exception("Invalid parent path: The path must be under Infrastructure.")
+rootList = ["Applications", "Environments", "Infrastructure", "Configuration"]
+rootErrorMessage = "The path must be under Applications, Environments, Infrastructure, or Configuration."
 
-if searchAncestor is not None and searchAncestor.split('/')[0] != "Infrastructure":
-  raise Exception("Invalid ancestor path: The path must be under Infrastructure.")
+if searchParent is not None and searchParent.split('/')[0] not in rootList:
+  raise Exception("Invalid parent path: " + rootErrorMessage)
+
+if searchAncestor is not None and searchAncestor.split('/')[0] not in rootList:
+  raise Exception("Invalid ancestor path: " + rootErrorMessage)
 
 items = repositoryService.query(Type.valueOf(searchType),searchParent,searchAncestor,None,None,None,0,-1)
 
