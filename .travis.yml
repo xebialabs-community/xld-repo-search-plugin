@@ -1,8 +1,7 @@
 language: java
 notifications:
-  hipchat:
-    rooms:
-      secure: puTJCCbwpjLW+tINkJNee421Eq5auHgJfPkutJ7RI6WvGg0NA/yYnUe0fOxAx9Fx6BnNWQqJbwDw0u3uW80b89P4x981VuIgM2r8QGO9QzjMO+IZSlaR+S2oc317EdlUfyR11et+It/VQlreAXyrGQlh1bBSPUisya//MMb13HYiiuO7W1AMUgSZAUrNOJYlCJUPMF29XkeqnCen7HlHRVCw/hB/Ukr/gwn6/jv/geo0k8L2u6j+1fule7DZ6dbrcKkpOMRyqOJoqEE8sQYbPQ+kjQGJEXy2eF5faPUg6yqyQyucOlh8iHxNlabxEnQAjicGUnua1JkjeWaRrUqgwT4GYxPUWMt4Sl/Cy7dx2V8mrBjlSzlPZVxfhrhy28ylhBCF2Nn7gEILNOQfIrQ5pUFJZ87NQNBVIlnGQ4VNl9a1+pg5yIFfDLDb9xSE9G952AUWeB0OQW5iePc/b7ZOvIi4dB/ohCNVJ1jWzk2Vef1pjGqudSB6tObPmXokqDa2KulobVDkcYcVG+MkEWlqL+IYF+lhpvf/ovjzN+PzaWH+yS5G1w6t9PDaY4A65rTUlyDgQO78E+v9pK7QXqc/jG3BIvJ7SiV0PR0LsmFlDU0jzqXoGMipQt8coMx6LRUSm+pZQHsBUnplajiWIgqA/g8nuFwSGbkqdwLb38NNYK8=
+  slack:
+    secure: HgTurckPtjQmmXVhu4xYqoVsHsiu1wF2vU7jHhoq7h7HTUYyY3ZDRYdEQkbfAM/442FGyQxSRl4LwTH/rshJwBTDL9jUhOQjvTIgkpSp/R4QbM+meuLKZkQO9CaEBxF+uBLRtasGyLYcDcN2+5nUK6lnFLaaFKjkXmS22BFfZsFRyU86o+93vuwTJBfMOrisLGsbRQZ/8+1W+Bf9QSYgA8XYP16qDsRdB0agH1skEnpmlV2obSi5KbbbkCSYdDlD125uqIz/cpqfEcln58bKZUrim9iCOmkKTtm000OlNtn2Fzky6eypzknMX2a+BY1Kamj9+QJhvuJoNSbjk+DRo49wuAyAdM/3O3pDzMKvJeBr+m3YuOKe2WfglWsy1sdxOFzv+VTkkDY9+nq5MvWiHjdB3s+ikXtBws4j2JkyqI3AwQzmI0oZMteneFl/vkE43hWJSr11gEWh6KcuQ7IqMjSIdLrVFzjIrqSeSQ3vbZ7IDYKZZb6e1ei2LNmYFrWuTZk61ZjzoTUWevmPMDRqrzZQFT5Chi25an/uyNg83h0EKyeYATVetatzo2Ik3kH0D2G0v/CGKrSVL/tYA0UOPPse5nj6RRuhiMbXIVlH+F1R1B/2/EB3pvFIAVUfYyiJR2KYN71dcOgwjDTbmD3GkYR2DRqioiTUACuRS0E7xVQ=
 deploy:
   provider: releases
   api_key:
@@ -13,4 +12,3 @@ deploy:
     all_branches: true
     tags: true
     repo: xebialabs-community/xld-repo-search-plugin
-
